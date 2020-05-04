@@ -1,4 +1,6 @@
-Analysis of the spring 2020 short story submissions to the literary magazine La Gran Belleza. Graphics used for the purposes of promotion on social media.
+# _La gran belleza_ short stories text analysis
+
+Analysis of the spring 2020 short story submissions to the literary magazine _La gran belleza_. Graphics used for the purposes of promotion on social media.
 
 ## Output of project
 Word clouds and bar charts (see below) analysing the frequency of vocabulary of the short stories.
