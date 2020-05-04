@@ -1,9 +1,12 @@
 # _La gran belleza_ short stories text analysis
 
-Analysis of the spring 2020 short story submissions to the literary magazine _La gran belleza_. Graphics used for the purposes of promotion on social media.
+Analysis of the spring 2020 short story submissions to the Spanish language literary magazine _La gran belleza_. Graphics used for the purposes of promotion on social media.
 
 ## Output of project
 Word clouds and bar charts (see below) analysing the frequency of vocabulary of the short stories.
+
+## Input
+300 short stories written in Spanish with a total of 324733 words.
 
 ## Tools used:
 * python-docx, odfpy, pywin32 and tika for converting documents to plain text
