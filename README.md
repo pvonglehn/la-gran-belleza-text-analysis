@@ -26,6 +26,8 @@ The full texts have not been included in this repo for copyright reasons.
 <img src="figures/unigrams_cloud.jpg" />
 <img src="figures/bigrams_cloud.jpg" />
 
+# Collaboration network
+<img src="figures/mapa_relacional.svg" />
 # Single word and bigram bar charts
 <img src="figures/unigrams_bar.jpg"   />
 <img src="figures/bigrams_bar.jpg" />
