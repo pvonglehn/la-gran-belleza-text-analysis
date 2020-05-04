@@ -35,8 +35,9 @@ def make_word_cloud(freq,title=None,savefile=None,fontsize=20,figsize=(10,10),
     plt.imshow(word_cloud, interpolation='bilinear')
     plt.axis('off')
     plt.title(title,fontsize=fontsize)
+    plt.tight_layout(pad=0)
     if savefile is not None:
-        plt.savefig(savefile,dpi=dpi)
+        plt.savefig(savefile,dpi=dpi,pad_inches=0)
 
 
 matplotlib.rc('xtick', labelsize=20) 
@@ -54,7 +55,7 @@ def plot_freq(freq,topn=15,title=None,savefig=None):
     ax.set_title(title)
     fig.tight_layout()
     if savefig is not None:
-        fig.savefig(savefig)
+        fig.savefig(savefig,pad_inches=0)
 
 for grams in ("unigrams","bigrams","trigrams"):
     file = structured_data_dir.joinpath(f"{grams}_freq.tsv")
