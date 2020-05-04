@@ -1,6 +1,6 @@
 # _La gran belleza_ data analysis 
 
-Text and network analysis of data from the Spanish language literary magazine _La gran belleza_. Graphics used for the purposes of promotion on social media.
+Text and network analysis of data from the Spanish language literary magazine [_La gran belleza_](https://www.lagranbelleza.es/). Graphics used for the purposes of promotion on social media.
 
 ## Output of project
 * Word clouds and bar charts (see below) analysing the frequency of vocabulary of the short stories.
@@ -26,8 +26,6 @@ The full texts have not been included in this repo for copyright reasons.
 <img src="figures/unigrams_cloud.jpg" />
 <img src="figures/bigrams_cloud.jpg" />
 
-# Collaboration network
-<img src="figures/mapa_relacional.svg" />
 # Single word and bigram bar charts
 <img src="figures/unigrams_bar.jpg"   />
 <img src="figures/bigrams_bar.jpg" />
