@@ -1,4 +1,5 @@
 from os import path
+import os
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
@@ -11,6 +12,11 @@ ROOT_DIR = pathlib.Path(__file__).parent.parent
 
 structured_data_dir = pathlib.Path().joinpath(ROOT_DIR,"data","structured")
 figures_dir = pathlib.Path().joinpath(ROOT_DIR,"figures")
+color_test_dir = figures_dir.joinpath("wordcloud_color_test")
+try:
+    os.mkdir(color_test_dir)
+except FileExistsError:
+    pass
 
 def make_word_cloud(freq,title=None,savefile=None,fontsize=20,figsize=(10,10),
                     width = 190,height=130,scale=3,stopwords=STOPWORDS,
@@ -57,14 +63,27 @@ def plot_freq(freq,topn=15,title=None,savefig=None):
     if savefig is not None:
         fig.savefig(savefig,pad_inches=0)
 
+colormap = 'Accent'
+
 for grams in ("unigrams","bigrams","trigrams"):
     file = structured_data_dir.joinpath(f"{grams}_freq.tsv")
     freq = pd.read_csv(file,index_col=0,sep="\t").iloc[:,0]
 
     fig_save_path = figures_dir.joinpath(f"{grams}_cloud.jpg")
     make_word_cloud(freq,savefile=fig_save_path,background_color="black",
-                    colormap="Pastel2_r",dpi=200,figsize=(20,20))
+                    colormap=colormap,dpi=200,figsize=(20,20))
 
     fig_save_path = figures_dir.joinpath(f"{grams}_bar.jpg")
 
     plot_freq(freq,title=f"most common {grams}",savefig=fig_save_path)
+
+
+# Test out different color maps
+
+colormaps = ['Accent', 'Blues_r', 'Dark2', 'GnBu_r', 'OrRd_r', 'Oranges', 'Paired', 'Pastel1', 'Reds', 'Spectral', 'Wistia', 'autumn']
+file = structured_data_dir.joinpath(f"unigrams_freq.tsv")
+freq = pd.read_csv(file,index_col=0,sep="\t").iloc[:,0]
+for colormap in colormaps:
+    fig_save_path = color_test_dir.joinpath(f"{colormap}.jpg")
+    make_word_cloud(freq,savefile=fig_save_path,background_color="black",
+        colormap=colormap,dpi=200,figsize=(20,20))
