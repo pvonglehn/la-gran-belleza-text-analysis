@@ -3,12 +3,12 @@
 Text and network analysis of data from the Spanish language literary magazine [_La gran belleza_](https://www.lagranbelleza.es/). Graphics used for the purposes of promotion on social media.
 
 ## Output of project
-* Word clouds and bar charts (see below) analysing the frequency of vocabulary of the short stories.
+* Word clouds and bar charts (see below) analysing the vocabulary of the short stories 
 * Graph of collaboration network
 
 ## Input
-* 300 short stories written in Spanish with a total of 324733 words.
-* List of 160 collaborators and details about which of the 7 magazine issues they worked on. 
+* 300 short stories written in Spanish with a total of 324733 words submitted to the spring 2020 edition of the magazine.
+* List of 160 collaborators and details about which of the 7 magazine issues they worked on.
 
 ## Tools used:
 * python-docx, odfpy, pywin32 and tika for converting documents to plain text
