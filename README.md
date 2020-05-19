@@ -23,15 +23,18 @@ Text and network analysis of data from the Spanish language literary magazine [_
 The full texts have not been included in this repo for copyright reasons.
 
 # Collaboration network
-This collaboration network represents the 160 collaborators (authors, illustrators, editors, musicians etc.) who collaborated in the first 7 editions and/or launch parties of the _La gran belleza_. The edges connect the names of the editions editions with names of people. The names clustered in the middle collaborated on more than one edition.
+This collaboration network represents the 160 collaborators (authors, illustrators, editors, musicians etc.) who collaborated in the first 7 editions and/or launch parties of the _La gran belleza_. The edges connect the names of the editions with names of people. The names clustered in the middle collaborated on more than one edition.  
+
+The graph was generated using networkX and then visualized using Gephi.
 <img src="figures/mapa_relacional.svg" />
 
 # Wordclouds
-These wordclouds are made up of the most common words occurring in the 300 short stories submitted to the spring edition of of _La gran Belleza_. The text was processed by tokenizing and lemmatizing using spaCy and generating bigrams using gensim.
+These wordclouds are made up of the most common words occurring in the 300 short stories submitted to the spring edition of of _La gran Belleza_, whose theme was 'vecinos' - neighbours. The text was processed by tokenizing and lemmatizing using spaCy and generating bigrams using gensim.
 <img src="figures/unigrams_cloud.jpg" />
 <img src="figures/bigrams_cloud.jpg" />
 
 # Single word and bigram bar charts
+Bar chart representations of the same data represented in the wordclouds above.
 <img src="figures/unigrams_bar.jpg"   />
 <img src="figures/bigrams_bar.jpg" />
 
