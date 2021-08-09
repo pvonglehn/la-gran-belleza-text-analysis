@@ -72,7 +72,7 @@ pytest==5.4.1
 python-dateutil==2.8.1
 python-docx==0.8.10
 pytz==2020.1
-pywin32==227
+pywin32==301
 pywinpty==0.5.7
 pyzmq==19.0.0
 qtconsole==4.7.3
